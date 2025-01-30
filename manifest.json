@@ -1,0 +1,23 @@
+
+{
+  "manifest_version": 3,
+  "name": "Background Customizer",
+  "version": "1.0",
+  "description": "Customize the background images on Playtoy's Belot game.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://playtoy.tportal.hr/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://playtoy.tportal.hr/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
